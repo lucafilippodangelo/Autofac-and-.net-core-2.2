@@ -49,9 +49,16 @@ namespace AutofacCore2_2.Controllers
             _aPerson.Cars.Add(_aCar);
             _aPerson.BuyCar();
 
+            SaveAPerson(_aPerson);
+
             return _aPerson.Cars;
         }
 
+        private void SaveAPerson(IPerson aPerson)
+        {
+
+        }
+        
         #region Region default Endpoints
 
         // GET api/values/5

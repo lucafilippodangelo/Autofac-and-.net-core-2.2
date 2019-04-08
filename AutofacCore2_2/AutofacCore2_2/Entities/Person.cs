@@ -48,6 +48,7 @@ namespace AutofacCore2_2.Entities
 
         #region Region DependencyInjection Approach
 
+        
         ILogger _aLogger;
         ICar _aCar;
         public Person(ILogger alogger, ICar aCar)
@@ -66,6 +67,10 @@ namespace AutofacCore2_2.Entities
 
             Cars.Add(_aCar);
             _aLogger.log("Car purchase happened");
+
+            //LD a test to save a car
+
+
         }
 
         #endregion Region DependencyInjection Approach End
