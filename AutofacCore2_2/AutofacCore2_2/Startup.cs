@@ -39,6 +39,9 @@ namespace AutofacCore2_2
             builder.RegisterType<Car>().As<ICar>();
             builder.RegisterType<Logger>().As<ILogger>();
 
+            //TEST REGISTRATION DBCONTEXT
+
+
             builder.Populate(services);
             this.ApplicationContainer = builder.Build();
 

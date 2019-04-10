@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,6 +9,8 @@ namespace AutofacCore2_2.Entities
 {
     public interface IPerson
     {
+
+int PersonId { get; set; }
         List<ICar> Cars { get; set; }
         string Name { get; set; }
         string Surname { get; set; }
@@ -20,6 +24,9 @@ namespace AutofacCore2_2.Entities
     /// </summary>
     public class Person : IPerson
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public  int PersonId { get; set; }
         public string Name {get; set;}
         public string Surname { get; set; }
         public List<ICar> Cars { get; set; } = new List<ICar>();

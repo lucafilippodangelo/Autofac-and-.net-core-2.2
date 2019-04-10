@@ -7,9 +7,9 @@ namespace AutofacCore2_2.DataLayer
     //LD DB001 - need to generate Interface returning DbContext
 
     /// <summary>
-    /// Interface of the "DbFactory" returning new or existing instance of "ApplicationDbContext"
+    /// Returns an instance on "ApplicationDbContext" by method "Init"
     /// </summary>
-    public interface IDbFactory
+    public interface IDbContextFactory
     {
         ApplicationDbContext Init();
     }
@@ -17,7 +17,7 @@ namespace AutofacCore2_2.DataLayer
     /// <summary>
     /// Concrete Implementation. Returns an instance on "ApplicationDbContext" by method "Init"
     /// </summary>
-    public class DbFactory : IDbFactory
+    public class DbFactory : IDbContextFactory
     {
         ApplicationDbContext dbContext;
 
